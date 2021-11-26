@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">MHA2021</string>
     <string name="team_app_logo_name">Microsofc Invest</string>
-    <string name="login_string">Login</string>
-    <string name="register_string">Register</string>
+    <string name="login_hint">Login</string>
+    <string name="login_button">Log In</string>
+    <string name="register_button">Register</string>
+    <string name="password_hint">Password</string>
+    <string name="or_string">or</string>
 </resources>
