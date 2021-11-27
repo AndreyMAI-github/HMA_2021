@@ -2,6 +2,7 @@ package microsofc.app.mha2021;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -27,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
                     toast.show();
                     break;
                 case R.id.buttonRegister:
-                    Toast toast1 = Toast.makeText(getApplicationContext(),"Register",Toast.LENGTH_SHORT);
-                    toast1.show();
+                    Intent regIntent = new Intent(getApplicationContext(), RegisterActivity.class);
+                    startActivity(regIntent);
                     break;
             }
 
