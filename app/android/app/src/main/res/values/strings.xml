@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">MHA2021</string>
-    <string name="team_app_logo_name">Microsofc Invest</string>
+    <string name="team_app_logo_name">by Microsofc</string>
+    <string name="app_logo">Открытие|Инвестиции</string>
     <string name="login_hint">Login</string>
     <string name="password_hint">Password</string>
     <string name="password_repeat_hint">Repeat password</string>
