@@ -2,10 +2,10 @@
 
 ## Backend
 ## Адрес
-https://stormy-badlands-67861.herokuapp.com
+<p>https://stormy-badlands-67861.herokuapp.com</p>
 ## API
-Регистрация пользователя https://stormy-badlands-67861.herokuapp.com/auth/sign-up
-Пример тела запроса: { "email": "Johnny@gmail.com", "username": "Mnemonik", "password": "grafNull" }
+<p>Регистрация пользователя https://stormy-badlands-67861.herokuapp.com/auth/sign-up</p>
+<p>Пример тела запроса: { "email": "Johnny@gmail.com", "username": "Mnemonik", "password": "grafNull" }</p>
 
-Логин https://stormy-badlands-67861.herokuapp.com/auth/sign-in
-Пример тела запроса: { "username": "Mnemonik", "password": "grafNull" }
+<p>Логин https://stormy-badlands-67861.herokuapp.com/auth/sign-in</p>
+<p>Пример тела запроса: { "username": "Mnemonik", "password": "grafNull" }</p>
