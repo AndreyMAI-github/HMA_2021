@@ -1,9 +1,9 @@
 # HMA_2021
 
 ## Backend
-## Адрес
+### Адрес
 <p>https://stormy-badlands-67861.herokuapp.com</p>
-## API
+### API
 <p>Регистрация пользователя https://stormy-badlands-67861.herokuapp.com/auth/sign-up</p>
 <p>Пример тела запроса: { "email": "Johnny@gmail.com", "username": "Mnemonik", "password": "grafNull" }</p>
 
