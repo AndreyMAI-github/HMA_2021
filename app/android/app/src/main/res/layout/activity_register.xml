@@ -8,7 +8,7 @@
 
     <EditText
         style= "@style/CustomEditText"
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextEmailReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -23,7 +23,7 @@
 
     <EditText
         style= "@style/CustomEditText"
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextLoginReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -31,14 +31,14 @@
         android:hint="@string/login_hint"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmailReg"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmailReg"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintStart_toStartOf="@+id/editTextEmailReg" />
 
     <EditText
         style= "@style/CustomEditText"
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/editTextPassReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -46,14 +46,14 @@
         android:hint="@string/password_hint"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName2"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmailReg"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
+        app:layout_constraintStart_toStartOf="@+id/editTextEmailReg"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailReg" />
 
     <EditText
         style= "@style/CustomEditText"
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/editTextPassConfirmReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
@@ -61,21 +61,21 @@
         android:hint="@string/password_repeat_hint"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassReg"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintStart_toStartOf="@+id/editTextPassReg"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassReg" />
 
     <Button
         style="@style/CustomButton"
-        android:id="@+id/button"
+        android:id="@+id/btnConfReg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/register_confirm_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword3"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPassConfirmReg"
+        app:layout_constraintStart_toStartOf="@+id/editTextPassConfirmReg"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassConfirmReg"
         app:layout_constraintVertical_bias="0.2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
