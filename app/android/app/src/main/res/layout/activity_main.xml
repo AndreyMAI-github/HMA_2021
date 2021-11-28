@@ -16,7 +16,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.2" />
 
     <AutoCompleteTextView
         android:id="@+id/loginTextView"
@@ -26,7 +26,7 @@
         android:hint="@string/login_hint"
         android:minWidth="48dp"
         android:minHeight="48dp"
-        android:text="eve.holt@reqres.in"
+        android:text="Mnemonik"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
@@ -42,7 +42,7 @@
         android:hint="@string/password_hint"
         android:inputType="textPassword"
         android:minHeight="48dp"
-        android:text="cityslicka"
+        android:text="graf0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/loginTextView"
         app:layout_constraintStart_toStartOf="@+id/loginTextView"

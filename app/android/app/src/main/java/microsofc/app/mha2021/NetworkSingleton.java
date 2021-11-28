@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class NetworkSingleton {
     private static NetworkSingleton mNet;
-    private static final String BASE_URL = "https://reqres.in"; //TODO our server
+    private static final String BASE_URL = "https://stormy-badlands-67861.herokuapp.com";
     private Retrofit mRetrofit;
 
     private NetworkSingleton() {

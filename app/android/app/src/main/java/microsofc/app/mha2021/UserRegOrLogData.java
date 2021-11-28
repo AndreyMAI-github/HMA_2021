@@ -6,30 +6,62 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class UserRegOrLogData {
-    @SerializedName("email") //TODO CHANGE IT
+
+    @SerializedName("username")
     @Expose
     private String name;
-    @SerializedName("email2")
+
+    @SerializedName("email")
     @Expose
     private String email;
-    @Expose
+
     @SerializedName("password")
-    private String passw;
     @Expose
+    private String password;
+
+    @SerializedName("id")
+    @Expose
+    private String id;
+
     @SerializedName("token")
+    @Expose
     private String token;
-    public UserRegOrLogData(String name, String passw, @Nullable String email) {
+
+    @SerializedName("message")
+    @Expose
+    private String message;
+
+    public UserRegOrLogData(@Nullable String name, @Nullable String password, @Nullable String email,
+                            @Nullable String id, @Nullable String token, @Nullable String message) {
         this.name = name;
-        this.passw = passw;
+        this.password = password;
         this.email = email;
+        this.id = id;
+        this.token = token;
+        this.message = message;
     }
 
     @Override
     public String toString(){
-        String formedString = new String("name:"+ name + "password:" + passw);
+        String formedString = new String("name:"+ name + "password:" + password);
         if(email!=null) {
             formedString = formedString + "email:" + email;
         }
         return formedString;
     }
+
+    public String getName(){ return name; }
+    public  String getEmail(){
+        return email;
+    }
+    public String getPassword(){
+        return password;
+    }
+    public String getId(){
+        return id;
+    }
+    public String getToken(){
+        return token;
+    }
+    public String getMessage(){return  message;}
 }

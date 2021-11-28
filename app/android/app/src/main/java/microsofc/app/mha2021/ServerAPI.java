@@ -6,8 +6,8 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 public interface ServerAPI {
-    @POST("/api/login")
+    @POST("/auth/sign-in")
     public Call<UserRegOrLogData> tryLogin(@Body UserRegOrLogData  UserData);
-    @POST("tryRegister")
+    @POST("/auth/sign-up")
     public Call<UserRegOrLogData> tryRegister(@Body UserRegOrLogData  UserData);
 }

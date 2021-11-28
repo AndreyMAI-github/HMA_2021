@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             switch (view.getId()){
                 case R.id.buttonLogIn:
                     UserRegOrLogData user = new UserRegOrLogData(editTextLogin.getText().toString(),
-                            editTextPass.getText().toString(),null);
+                            editTextPass.getText().toString(),null, null, null, null);
 
                     GsonBuilder gsonBuilder = new GsonBuilder();
                     Gson gson = gsonBuilder.create();
@@ -53,12 +53,9 @@ public class MainActivity extends AppCompatActivity {
                     stringCall.enqueue(new Callback<UserRegOrLogData>() {
                         @Override
                         public void onResponse(Call<UserRegOrLogData> call, Response<UserRegOrLogData> response) {
-                            Toast toast = Toast.makeText(getApplicationContext(), /*"token"*/gson.toJson(user),Toast.LENGTH_SHORT);
+                            String token = "Login Successful!\nToken:" + gson.toJson(response.body());
+                            Toast toast = Toast.makeText(getApplicationContext(), token/*gson.toJson(user)*/,Toast.LENGTH_SHORT);
                             toast.show();
-                            String token = gson.toJson(response.body());
-                            editTextLogin.setText(token);
-                            //Toast toast = Toast.makeText(getApplicationContext(), token/*gson.toJson(user)*/,Toast.LENGTH_SHORT);
-                            //toast.show();
                         }
 
                         @Override
