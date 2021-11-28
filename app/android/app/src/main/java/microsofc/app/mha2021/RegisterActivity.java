@@ -39,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
             Gson gson = gsonBuilder.create();
 
             ServerAPI serverAPI = NetworkSingleton.getInstance().getServerAPI(); //Magic part
-            serverAPI.tryLogin(gson.toJson(user)); //TODO TRY REGISTER
+            serverAPI.tryRegister(user);
             Toast toast = Toast.makeText(getApplicationContext(), gson.toJson(user),Toast.LENGTH_LONG);
             toast.show();
             finish();

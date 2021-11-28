@@ -18,6 +18,10 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,16 +42,31 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener btnListener = view -> {
             switch (view.getId()){
                 case R.id.buttonLogIn:
-                    UserRegOrLogData user = new UserRegOrLogData(editTextLogin.toString(),editTextPass.toString(),null);
+                    UserRegOrLogData user = new UserRegOrLogData(editTextLogin.getText().toString(),
+                            editTextPass.getText().toString(),null);
 
                     GsonBuilder gsonBuilder = new GsonBuilder();
                     Gson gson = gsonBuilder.create();
 
                     ServerAPI serverAPI = NetworkSingleton.getInstance().getServerAPI();
-                    serverAPI.tryLogin(gson.toJson(user));
+                    Call<UserRegOrLogData> stringCall = serverAPI.tryLogin(user);
+                    stringCall.enqueue(new Callback<UserRegOrLogData>() {
+                        @Override
+                        public void onResponse(Call<UserRegOrLogData> call, Response<UserRegOrLogData> response) {
+                            Toast toast = Toast.makeText(getApplicationContext(), /*"token"*/gson.toJson(user),Toast.LENGTH_SHORT);
+                            toast.show();
+                            String token = gson.toJson(response.body());
+                            editTextLogin.setText(token);
+                            //Toast toast = Toast.makeText(getApplicationContext(), token/*gson.toJson(user)*/,Toast.LENGTH_SHORT);
+                            //toast.show();
+                        }
 
-                    Toast toast = Toast.makeText(getApplicationContext(),gson.toJson(user),Toast.LENGTH_SHORT);
-                    toast.show();
+                        @Override
+                        public void onFailure(Call<UserRegOrLogData> call, Throwable t) {
+                            Toast toast = Toast.makeText(getApplicationContext(), "Error:" + t.toString(),Toast.LENGTH_SHORT);
+                            toast.show();
+                        }
+                    });
                     break;
                 case R.id.buttonRegister:
                     Intent regIntent = new Intent(getApplicationContext(), RegisterActivity.class);

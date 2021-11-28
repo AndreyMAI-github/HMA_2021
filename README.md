@@ -1,5 +1,1 @@
 # HMA_2021
-
-ANDREY DUBOVSKII LOH
-
-sfdsdfsfds
